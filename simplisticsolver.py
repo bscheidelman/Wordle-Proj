@@ -1,3 +1,8 @@
+#extremely simple solver
+#not very effective
+#average solve time > 7
+
+
 #import colors
 from colorama import Fore, Back, Style
 
