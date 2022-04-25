@@ -1,3 +1,8 @@
+#Alter "filtdata" and "next_guess" to your algo
+#Set itteration amnt 
+# Will output avg solve time
+
+
 #import colors
 from colorama import Fore, Back, Style
 
