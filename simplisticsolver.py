@@ -1,6 +1,7 @@
 #extremely simple solver
 #uses preset words in order to filter initaly
 #very inneficent solution
+#Average over 1k itterations in solvertester.py is 6.761 guesses per solve
 
 
 
