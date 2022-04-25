@@ -9,7 +9,8 @@ solvertester.py can be used to test the average solve times of each solution
 current best average: ~5.231 guesses per solve over 1k itterations. PS: You can actualy play wordle remake!
 
 # improvments:
-the filtdata function in all versions is extremely underveloped and of ten results in vast underfiltering
+the filtdata function in all versions is extremely underveloped and often results in vast underfiltering.
+improving it's manner of handling duplicates within words and a number of other cases could vastly decrease the avg guess time.
 
 # problems
 for wordleremake.py, which is the basis that I made for which all of the code runs on, there is most likely some problem when solving for words that have 3 of one letter such as "daddy."
