@@ -14,3 +14,6 @@ the filtdata function in all versions is extremely underveloped and of ten resul
 # problems
 for wordleremake.py, which is the basis that I made for which all of the code runs on, there is most likely some problem when solving for words that have 3 of one letter such as "daddy."
 Sorry :(
+
+# scoring system
+the basis for the [+8, +3] scoring system used in corelation coeficent based solver can be found in "ss.png" as that combination netted the lowest avg guess time over 500 iterations of each combo
