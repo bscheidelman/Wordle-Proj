@@ -1,6 +1,7 @@
 #current personal best solver
 #lot of inefficeny in "filtdata"
 #first guess is preset to "tares" in order to speed up solve time as that will always be the result of the solver
+#Average over 1k itterations in solvertester.py is 5.231 guesses per solve
 
 
 #import colors
