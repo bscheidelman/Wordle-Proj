@@ -17,3 +17,4 @@ Sorry :(
 
 # scoring system
 the basis for the [+8, +3] scoring system used in corelation coeficent based solver can be found in "ss.png" as that combination netted the lowest avg guess time over 500 iterations of each combo
+the subsequent [-4,-1.5] found within the scoring system are to discourage guessing duplicates too early as too not double count scores. 
