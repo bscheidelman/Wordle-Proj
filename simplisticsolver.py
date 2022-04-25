@@ -1,3 +1,9 @@
+#extremely simple solver
+#uses preset words in order to filter initaly
+#very inneficent solution
+
+
+
 #import colors
 from colorama import Fore, Back, Style
 
@@ -73,30 +79,13 @@ def filtdata(dimensions, guess_pair):
 
 def next_guess(guess_total):
     if guess_total == 1:
-        temp = "tares"
+        temp = "crane"
+    elif guess_total == 2:
+        temp = "godly"
+    elif guess_total == 3:
+        temp = "swift"
     else:
-        coreCoef = []
-        for val in ds:
-            num = 0
-            for oval in ds:
-                for let in range(len(val)):
-                    if val[let] == oval[let]:
-                        num += 8
-                        if val.count(val[let]) > 1:
-                            num -= 4
-                    elif oval.__contains__(val[let]):
-                        num += 3
-                        if val.count(val[let]) > 1:
-                            num -= 1.5
-            num = num/len(ds)
-            coreCoef.append(num)
-            if len(ds) < 50:
-                print(val, num)
-        maxval = max(coreCoef)
-        temp = ds[coreCoef.index(maxval)]
-    
-        print("average:", sum(coreCoef)/len(coreCoef))
-        print("Max Corecoeff: ", maxval)
+        temp = ds[0]
     return temp
 ds = remake_data('sgb-words.txt')
 
