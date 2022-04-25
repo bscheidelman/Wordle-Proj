@@ -1,8 +1,3 @@
-#extremely simple solver
-#not very effective
-#average solve time > 7
-
-
 #import colors
 from colorama import Fore, Back, Style
 
@@ -53,6 +48,8 @@ def filtdata(dimensions, guess_pair):
                 if word.__contains__(guess_pair[val]):
                     if guess_pair.count(guess_pair[val]) == 1:
                             ds.remove(word)
+                    elif guess_pair.count(guess_pair[val]) == 2:
+                        a = 0
         elif dimensions[val] == 1: 
             for word in ds:
                 if word.__contains__(guess_pair[val]):
@@ -67,26 +64,44 @@ def filtdata(dimensions, guess_pair):
                         ds.remove(word)
                 else:
                     ds.remove(word)
-        exit = len(ds)
-        diff = init - exit
-        print("Removed", diff, "values")
-        print(len(ds), "values remaning")
-        if len(ds) < 10:
-            print("Remaning values:", ds)
+    exit = len(ds)
+    diff = init - exit
+    print("Removed", diff, "values")
+    print(len(ds), "values remaning")
+    if len(ds) < 10:
+        print("Remaning values:", ds)
 
 def next_guess(guess_total):
     if guess_total == 1:
-        temp = "crane"
-    elif guess_total == 2:
-        temp = "godly"
-    elif guess_total == 3:
-        temp = "swift"
+        temp = "tares"
     else:
-        temp = ds[0]
+        coreCoef = []
+        for val in ds:
+            num = 0
+            for oval in ds:
+                for let in range(len(val)):
+                    if val[let] == oval[let]:
+                        num += 8
+                        if val.count(val[let]) > 1:
+                            num -= 4
+                    elif oval.__contains__(val[let]):
+                        num += 3
+                        if val.count(val[let]) > 1:
+                            num -= 1.5
+            num = num/len(ds)
+            coreCoef.append(num)
+            if len(ds) < 50:
+                print(val, num)
+        maxval = max(coreCoef)
+        temp = ds[coreCoef.index(maxval)]
+    
+        print("average:", sum(coreCoef)/len(coreCoef))
+        print("Max Corecoeff: ", maxval)
     return temp
 ds = remake_data('sgb-words.txt')
 
 all_words = remake_data('sgb-words.txt')
+#mystery_word = "askew"
 mystery_word = random.choice(remake_data('sgb-words.txt'))
 print(mystery_word)
 #Convert to list
