@@ -1,6 +1,6 @@
 # inpso:
 hi, this was a for-fun project that I started because I was bored on a train ride!
-while I garuntee most of the solutions are extremly inefficent, I had a lot of time making them.
+while I guarantee most of the solutions are extremly inefficent, I had a lot of time making them.
 
 # notes:
 the sgb-words.txt is the word list used for this project.
