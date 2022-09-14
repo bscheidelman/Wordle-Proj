@@ -298,13 +298,9 @@ while num_guess > 0:
                             output[i] = 1    
             else:
                 if unique_duplicates_guess[0] != unique_duplicates_mystery[0]:
-                    print(1)
                     if unique_duplicates_guess[0] != unique_duplicates_mystery[1]:
-                        print(2)
                         if unique_duplicates_guess[1] != unique_duplicates_mystery[0]:
-                            print(3)
                             if unique_duplicates_guess[1] != unique_duplicates_mystery[1]:
-                                print(4)
                                 guess_list_index_one = []
                                 guess_list_index_two = []
                                 temp_list = guess_list.copy()
